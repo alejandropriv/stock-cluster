@@ -6,6 +6,15 @@ resources:
 - private-repo-creds.yaml
 - https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
+
+helmChartInflationGenerators:
+  - chart: argo-cd
+    version: stable  # or specify the version you want
+    releaseName: argocd
+    namespace: argocd
+    valuesFile: values.yaml  # Path to your custom values.yaml file
+
+
 patches:
   - path: argo-cmd-params-cm.yaml
     target:

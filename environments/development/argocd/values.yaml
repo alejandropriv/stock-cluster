@@ -1,0 +1,8 @@
+server:
+  service:
+    ports:
+      - port: 80
+        targetPort: 80  # Internal ArgoCD port
+      - port: 8085  # Exposing ArgoCD on external port 8085
+        targetPort: 80  # Internal ArgoCD port
+    type: ClusterIP
