@@ -1,3 +1,6 @@
+# Create private-repo-creds sealed secret
+./create_sealed_secret.sh private-repo-creds.unsealed.secret.yaml
+
 1. To initialize argocd CRDS run: 
 run kubectl apply -k /Users/alejandroprieto/projects/stock-cluster/environments/development/argocd 
 
