@@ -1,3 +1,6 @@
+# Install sealed-secrets manually with controller
+helm install sealed-secrets -n kube-system --set-string fullnameOverride=sealed-secrets-controller sealed-secrets/sealed-secrets 
+
 # Create private-repo-creds sealed secret
 ./create_sealed_secret.sh private-repo-creds.unsealed.secret.yaml
 
