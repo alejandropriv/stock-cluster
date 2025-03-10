@@ -38,7 +38,7 @@ Check if the ports are open
     netstat -tuln | grep 8085
 
 
-    kubectl apply -k /Users/alejandroprieto/projects/stock-cluster/environments/development
+    kubectl apply -k /Users/alejandroprieto/projects/gitops-infra/environments/development
 
 
 

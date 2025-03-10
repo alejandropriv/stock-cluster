@@ -5,8 +5,8 @@ helm install sealed-secrets -n kube-system --set-string fullnameOverride=sealed-
 ./create_sealed_secret.sh private-repo-creds.unsealed.secret.yaml
 
 1. To initialize argocd CRDS run: 
-run kubectl apply -k /Users/alejandroprieto/projects/stock-cluster/environments/development/argocd 
+run kubectl apply -k /Users/alejandroprieto/projects/gitops-infra/environments/development/argocd 
 
 2. To configure argoCD in the environment run:
-Run kubectl apply -k /Users/alejandroprieto/projects/stock-cluster/environments/development 
+Run kubectl apply -k /Users/alejandroprieto/projects/gitops-infra/environments/development 
 

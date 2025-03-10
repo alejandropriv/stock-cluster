@@ -1,15 +1,15 @@
-# echo "/opt/repos/stock-cluster/applications/kaniko/docker -alldirs -mapall="$(id -u)":"$(id -g)" $(minikube ip -p minik-nodes)" | sudo tee -a /etc/exports
+# echo "/opt/repos/gitops-infra/applications/kaniko/docker -alldirs -mapall="$(id -u)":"$(id -g)" $(minikube ip -p minik-nodes)" | sudo tee -a /etc/exports
 # minikube stop -p minik-nodes
 # minikube ssh -p minik-nodes
-# minikube start --driver qemu --network socket_vmnet -p minik-nodes mount "/opt/repos/stock-cluster/applications/kaniko/docker:/data/dockerfiles"
+# minikube start --driver qemu --network socket_vmnet -p minik-nodes mount "/opt/repos/gitops-infra/applications/kaniko/docker:/data/dockerfiles"
 
 #minikube addons enable storage-provisioner-rancher -p minik-nodes
 
 # SCP -- Transfer-files
-scp -r -i $(minikube ssh-key -p minik-nodes -n minik-nodes-m02) /opt/repos/stock-cluster/applications/kaniko/docker/ubuntu docker@$(minikube ip -p minik-nodes -n minik-nodes-m02):dockerfiles
+scp -r -i $(minikube ssh-key -p minik-nodes -n minik-nodes-m02) /opt/repos/gitops-infra/applications/kaniko/docker/ubuntu docker@$(minikube ip -p minik-nodes -n minik-nodes-m02):dockerfiles
 minikube ssh -p minik-nodes -n  minik-nodes-m02 sudo  mv dockerfiles /data
 
-cd /opt/repos/stock-cluster/applications/kaniko/
+cd /opt/repos/gitops-infra/applications/kaniko/
 
 kubectl apply -f ns-kaniko.yaml
 kubectl apply -f pv-dockerfile.yaml

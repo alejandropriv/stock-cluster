@@ -7,9 +7,9 @@
 
 # Run the installation of ArgoCD
 
-    kubectl apply -k /Users/alejandroprieto/projects/stock-cluster/applications/argocd
+    kubectl apply -k /Users/alejandroprieto/projects/gitops-infra/applications/argocd
 
-    # kubectl apply -k /Users/alejandroprieto/projects/stock-cluster/environments/development
+    # kubectl apply -k /Users/alejandroprieto/projects/gitops-infra/environments/development
 
 # Check the initial admin password
 

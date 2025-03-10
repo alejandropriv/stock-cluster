@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: "git@github.com:alejandropriv/stock-cluster.git"
+    repoURL: "git@github.com:alejandropriv/gitops-infra.git"
     path: environments/development/trivy-operator
     targetRevision: HEAD
   destination:

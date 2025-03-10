@@ -29,8 +29,8 @@ chmod 700 get_helm.sh
 
 # Install argocd
 
-/opt/repos/stock-cluster/installation.sh
-/opt/repos/stock-cluster/applications/kaniko
+/opt/repos/gitops-infra/installation.sh
+/opt/repos/gitops-infra/applications/kaniko
 
 
 #  This container is having trouble accessing https://registry.k8s.io #15649
